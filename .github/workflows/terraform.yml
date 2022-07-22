@@ -3,7 +3,7 @@ name: Terraform Integration
 on:
   push:
     branches:
-      - terraform
+      - main
 
 jobs:
   terraform:
