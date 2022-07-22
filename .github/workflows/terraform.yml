@@ -85,6 +85,9 @@ jobs:
 
     # Generates an execution plan for Terraform
     - name: Terraform Plan
+      env:
+        AWS_ACCESS_KEY: ${{ secrets.AWS_ACCESS_KEY}}
+        AWS_SSECRET_KEY: ${{ secrets.AWS_SECRET_KEY}}
       run: terraform plan -input=false
 
       # On push to "main", build or change infrastructure according to Terraform configuration files
